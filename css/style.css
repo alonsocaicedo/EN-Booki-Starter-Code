@@ -1,116 +1,340 @@
 /****** General ***********/
 * {
-    font-family: 'Raleway', sans-serif;
-}
-
-:root {
-    --main-color: #0065FC;
-    --main-bg-color: #F2F2F2;
-    --filter-bg-color: #DEEBFF;
-}
-
-.fa-solid, .fa-regular {
+    font-family: "Raleway", sans-serif;
+  }
+  
+  :root {
+    --main-color: #0065fc;
+    --main-bg-color: #f2f2f2;
+    --filter-bg-color: #deebff;
+  }
+  
+  .fa-solid,
+  .fa-regular {
     color: var(--main-color);
-}
-
-body {
+  }
+  
+  body {
     display: flex;
     justify-content: center;
-}
-
-.main-container {
+  }
+  
+  .main-container {
     width: 100%;
     padding: 0 50px;
     box-sizing: border-box;
-}
-
-.section-title {
+  }
+  
+  .section-title {
     margin: 0;
     font-size: 22px;
-}
-
-.card {
+  }
+  
+  .card {
     background-color: white;
     border-radius: 20px;
     padding: 5px;
     filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-}
-
-.card img {
+  }
+  
+  .card img {
     object-fit: cover;
-}
-
-.card-title {
+  }
+  
+  .card-title {
     font-size: 16px;
-}
-
-.euro {
+  }
+  
+  .euro {
     font-weight: 700;
-}
-
-.neutralStar {
-    color: var(--main-bg-color)
-}
-
-/****** Accommodation And Popular ***********/
-.accommodation-and-popular {
+  }
+  
+  .neutralStar {
+    color: var(--main-bg-color);
+  }
+  
+  /****** Accommodation And Popular ***********/
+  
+  .accommodation-and-popular {
     display: flex;
-    justify-content: space-between;
-}
-
-.accommodation-and-popular section {
-    background-color: var(--main-bg-color);
+    outline: 4px dotted blue;
+    width: 100%;
+    gap: 100px;
+  }
+  
+  .accommodation-and-popular section {
     border-radius: 20px;
     padding: 30px;
+    margin-top: 0px;
     box-sizing: border-box;
-}
-
-/****** Accommodation ***********/
-.accommodation {
-    width: 65%;
-}
-
-/****** Popular ***********/
-.popular {
+    outline: 7px solid pink;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    background-color: var(--main-bg-color);
+  }
+  
+  /****** Accommodation ***********/
+  .accommodation-title {
+    margin: 0;
+    margin-bottom: 20px; /* Adds space below the heading */
+    font-size: 22px; /* Size of the heading */
+    text-align: left; /* Aligns text to the left */
+  }
+  
+  .accommodation-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  /*  grid-template-rows: 1fr 1fr; */
+  /*   width: 65%; */
+    outline: 2px solid orange;
+  /*   padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 20px; */
+  }
+  
+  .accommodation-card {
+  /*   margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 0px;
+    width: 216px; */
+    border-radius: 10px;
+    background-color: #ffffff;
+  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  
+    outline: 3px solid blue;
+  }
+  
+  .accommodation-card h3 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  
+  .accommodation-card p {
+    margin: 5px 0px;
+  }
+  
+  .accommodation-card span {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+     color: #0065fc;
+  }
+  
+  .accommodation-card img {
+    width: 100%;
+    height: 40%;
+    
+    padding-bottom: 0px;
+  }
+  
+  /****** Popular ***********/
+  .popular {
     width: 32%;
-}
-
-.popular-title {
+  }
+  
+  .popular-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.popular-cards .card {
+  }
+  
+  .popular-cards .card {
     display: flex;
     margin-top: 33px;
-}
-
-.popular-cards img {
+  }
+  
+  .popular-cards img {
     width: 33%;
     height: 136px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-}
-
-.popular-cards .card-content {
+  }
+  
+  .popular-cards .card-content {
     width: 67%;
     padding-left: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
-}
-
-.popular-cards .card-title {
+  }
+  
+  .popular-cards .card-title {
     margin-top: 10px;
     margin-bottom: 4px;
-}
-
-.popular-cards .card-subtitle {
+  }
+  
+  .popular-cards .card-subtitle {
     margin: 0;
-}
-
-.popular-cards .card-rating {
+  }
+  
+  .popular-cards .card-rating {
     margin-bottom: 5px;
-}
+  }
+  
+  header {
+  }
+  
+  .headercontainer img {
+    height: 50px;
+  
+    margin-top: 10px;
+  }
+  
+  .headercontainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .headercontainer ul {
+    margin-top: 30px;
+  }
+  
+  .headercontainer a:hover {
+    color: #0065fc;
+    border-top: 1.5px solid #0065fc;
+  }
+  
+  .headercontainer nav {
+  }
+  
+  .headercontainer ul {
+    list-style: none;
+    text-decoration: none;
+  
+    padding-left: 0px;
+  
+    display: flex;
+    flex-wrap: nowrap; /* fixes the links from wrapping under each other, however only if padding is 39 or less */
+  }
+  .headercontainer li {
+    display: inline;
+  }
+  
+  .headercontainer a {
+    text-decoration: none;
+    color: black;
+    letter-spacing: 0.6px;
+    text-align: center;
+    padding: 10px 40px; /*  top/btm, l/r */
+  }
+  
+  /* Tablet: NEED Most Pop UNDER ACCOMODATION, and things to do to adjust height/width*/
+  
+  @media (width <= 700px) {
+    .headercontainer img {
+      margin-top: 10px;
+    }
+    header {
+    }
+  }
+  /* Mobile Device */
+  @media (max-width: 480px) {
+    header {
+      display: flex;
+      flex-flow: row;
+      /* Since flex-flow is column, it's centered in a VERTICAL ↕️ axis in a column-based layout  */
+      justify-content: center;
+      align-content: center;
+    }
+  
+    .headercontainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .headercontainer a:hover {
+      border-top: none;
+      border-bottom: 1.5px solid #0065fc;
+    }
+  
+    .headercontainer nav {
+      width: 100%;
+    }
+  
+    .headercontainer img {
+    }
+  
+    .headercontainer ul {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      /*  gap-left: 0px;
+  margin-left: 0px;
+      padding-left: 0px; 
+  Trying to make the border when hovering over anchor touch the entire side 
+  */
+    }
+  
+    .headercontainer li {
+    }
+  }
+  
+  .accomodation-card img {
+    width: 215px;
+    height: 120px;
+    border-radius: 5px;
+  }
+  
+  footer {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 20px;
+    padding-right: 0px;
+    box-sizing: border-box;
+  
+    width: 100%;
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+  }
+  
+  footer ul {
+    padding-left: 0px;
+    list-style: none;
+  }
+  
+  footer li {
+  }
+  
+  footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+  }
+  
+  footer section {
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  footer h3 {
+    /*   text-align: left; */
+    padding-left: 0px;
+    margin: 0px;
+  }
+  
+  footer a {
+    color: black;
+    text-decoration: none;
+    font-weight: 100;
+    letter-spacing: 1px;
+    display: block; /* so that margins work bc a are default inline, so no t or b margins */
+    margin-top: 0px; /* space above */
+    margin-bottom: 5px; /* space below */
+  }
+  
+  footer a:hover {
+    color: lightgray;
+  }
+  
+  footer a:active {
+    color: darkgray;
+  }
+  
