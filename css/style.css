@@ -53,6 +53,54 @@
     color: var(--main-bg-color);
   }
   
+/*Search and Filters*/ 
+/****** Search Form ******/
+.search-grp {
+    display: flex;
+  }
+  
+  .pin-icon-cont {
+    border: 1px solid black;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  .pin-icon-cont svg {
+    width: 18px;
+    height: auto;
+  }
+  
+  .searchform {
+    height: 25px;
+    padding-bottom: 30px;
+  }
+  
+  .search {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  
+  /****** Filters ******/
+  .filters {
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .filters a{
+    border: 1px solid gray;
+   display: flex;
+  gap: 10px;
+  }
+  
+  .filters .icon{
+  fill: blue;
+    height: 20px;
+    width: auto;
+  }
+  
   /****** Accommodation And Popular ***********/
   
   .accommodation-and-popular {
