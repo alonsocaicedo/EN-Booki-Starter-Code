@@ -56,28 +56,31 @@
   /****** Accommodation And Popular ***********/
   
   .accommodation-and-popular {
-   display: flex;
-  justify-content: space-between; 
-    margin-bottom: 10px;
-    /* to make sure that accom and pop sections take up respective widths of 65% and 32% */
+    display: flex;
+    justify-content: space-between;
   }
   
   .accommodation-and-popular section {
     border-radius: 20px;
-    padding: 30px;
+    padding: 10px;
     margin-top: 0px;
     box-sizing: border-box;
     flex-direction: column;
     display: flex;
+    justify-content: space-around;
     background-color: var(--main-bg-color);
   }
   
   /****** Accommodation ***********/
   .accommodation {
-    display: flex;
     width: 65%;
-}
-
+  }
+  
+  .accommodation section {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
   .accommodation-title {
     margin: 0;
     margin-bottom: 20px; /* Adds space below the heading */
@@ -88,23 +91,29 @@
   .accommodation-cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-  /*  grid-template-rows: 1fr 1fr; */
-  /*   width: 65%; */
-  /*   padding-left: 5px;
+    gap: 10px;
+    /*  grid-template-rows: 1fr 1fr; */
+    /*   width: 65%; */
+  
+    /*   padding-left: 5px;
     padding-right: 5px;
     margin-right: 20px; */
   }
   
   .accommodation-card {
-  /*   margin-bottom: 10px;
+    /*   margin-bottom: 10px;
     margin-right: 10px;
     margin-left: 0px;
     width: 216px; */
     border-radius: 10px;
     background-color: #ffffff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
+  }
+  
+  .accommodation-card-txt{
+      display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
   
   .accommodation-card h3 {
@@ -121,7 +130,7 @@
     margin-bottom: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
-     color: #0065fc;
+    color: #0065fc;
   }
   
   .accommodation-card img {
@@ -132,9 +141,17 @@
     padding-bottom: 0px;
   }
   
+  .accommodation a {
+    padding-top: 15px;
+    text-decoration: none;
+  }
+  
+  .accommodation a:visited {
+    color: black;
+  }
+  
   /****** Popular ***********/
   .popular {
-    display: flex;
     width: 32%;
   }
   
@@ -146,7 +163,8 @@
   
   .popular-cards .card {
     display: flex;
-    margin-top: 33px;
+    display: flex;
+    margin-top: 5px;
   }
   
   .popular-cards img {
@@ -226,6 +244,57 @@
     padding: 10px 40px; /*  top/btm, l/r */
   }
   
+  footer {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 20px;
+    padding-right: 0px;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 20px;
+    letter-spacing: 0.5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  footer ul {
+    padding-left: 0px;
+    list-style: none;
+  }
+  
+  footer li {
+  }
+  
+  footer section {
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  footer h3 {
+    /*   text-align: left; */
+    padding-left: 0px;
+    margin: 0px;
+  }
+  
+  footer a {
+    color: black;
+    text-decoration: none;
+    font-weight: 100;
+    letter-spacing: 1px;
+    display: block; /* so that margins work bc a are default inline, so no t or b margins */
+    margin-top: 0px; /* space above */
+    margin-bottom: 5px; /* space below */
+  }
+  
+  footer a:hover {
+    color: lightgray;
+  }
+  
+  footer a:active {
+    color: darkgray;
+  }
+  
   /* Tablet: NEED Most Pop UNDER ACCOMODATION, and things to do to adjust height/width*/
   
   @media (width <= 700px) {
@@ -234,9 +303,61 @@
     }
     header {
     }
+    .accommodation-and-popular {
+      display: flex;
+      flex-direction: column;
+    }
+    .accommodation {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  
+    .accommodation-card {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  
+    .popular {
+      width: 100%;
+      justify-content: space-between;
+      gap: 0px;
+    }
+  
+    .popular-cards {
+    }
+  
+    .popular-cards .card-content {
+      justify-content: space-around;
+    }
+  
+    .card {
+      min-width: 100%;
+      height: 100%;
+    }
+    .card-txt h3 {
+      font-size: 0.8em;
+    }
+  
+    .card-txt p {
+      font-size: 0.2em;
+    }
+  
+    .card-rating {
+      font-size: 0.5em;
+    }
+  
+    .card img {
+      max-height: 100%;
+    }
   }
   /* Mobile Device */
   @media (max-width: 480px) {
+    footer {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  
     header {
       display: flex;
       flex-flow: row;
@@ -276,67 +397,26 @@
   
     .headercontainer li {
     }
-  }
   
-  .accomodation-card img {
-    width: 215px;
-    height: 120px;
-    border-radius: 5px;
-  }
+    .accommodation-and-popular {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 10px;
+    }
   
-  footer {
-    background-color: var(--main-bg-color);
-    border-radius: 20px;
-    padding: 20px;
-    padding-right: 0px;
-    box-sizing: border-box;
+    .accommodation-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
   
-    width: 100%;
-    margin-top: 20px;
-    letter-spacing: 0.5px;
-  }
+    .popular-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   
-  footer ul {
-    padding-left: 0px;
-    list-style: none;
-  }
-  
-  footer li {
-  }
-  
-  footer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    width: 100%;
-  }
-  
-  footer section {
-    display: grid;
-    width: 90%;
-    margin: 0 auto;
-  }
-  
-  footer h3 {
-    /*   text-align: left; */
-    padding-left: 0px;
-    margin: 0px;
-  }
-  
-  footer a {
-    color: black;
-    text-decoration: none;
-    font-weight: 100;
-    letter-spacing: 1px;
-    display: block; /* so that margins work bc a are default inline, so no t or b margins */
-    margin-top: 0px; /* space above */
-    margin-bottom: 5px; /* space below */
-  }
-  
-  footer a:hover {
-    color: lightgray;
-  }
-  
-  footer a:active {
-    color: darkgray;
+    .popular-cards .card {
+      margin-top: 10px;
+    }
   }
   
