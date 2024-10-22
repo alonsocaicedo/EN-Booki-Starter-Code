@@ -55,29 +55,81 @@
   
 /*Search and Filters*/ 
 /****** Search Form ******/
-.search-grp {
+.info-grp h5 {
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+  
+  .info-grp h6 {
+    font-size: 16px;
+    font-weight: 100;
+    margin-top: 0px;
+  }
+  
+  .search-bar {
     display: flex;
+    align-content: center;
+    height: 49px;
   }
   
   .pin-icon-cont {
-    border: 1px solid black;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border: 1px solid #f2f2f2;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  
+  .search-rectangle {
+    width: 50px;
+    height: 49px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: #f2f2f2;
+  
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
   }
   
   .pin-icon-cont svg {
-    width: 18px;
-    height: auto;
+    width: 14px;
+    height: 18px;
   }
   
-  .searchform {
-    height: 25px;
-    padding-bottom: 30px;
+  .info-grp {
+    margin-bottom: 30px;
   }
   
   .search {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    width: 93px;
+    height: 49px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: none;
+    background-color: #0065fc;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 15px 16px;
+    display: flex;
+  }
+  
+  .search-location{
+    clip: rect(0, 0, 0, 0);
+     position: absolute; /* Positions the element off-screen */
+  }
+  
+  input::placeholder {
+    color: black;
+    text-align: center;
+    font-weight: 700;
+   line-height: 21px;
+    font-size: 18px;
+  }
+  
+  input{
+    padding: 20px;
+    border: 1px solid #F2F2F2;
   }
   
   /****** Filters ******/
@@ -87,18 +139,74 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    align-items: center;
   }
   
-  .filters a{
-    border: 1px solid gray;
-   display: flex;
-  gap: 10px;
+  .filters{
+    padding-left: 0px;
+    margin: 30px 0px;
   }
   
-  .filters .icon{
-  fill: blue;
-    height: 20px;
-    width: auto;
+  .filters li {
+    display: flex;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+  font-weight: 700;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .filters a {
+    display: flex;
+    text-align: center;
+    line-height: 21.13px;
+    padding: 10px;
+    gap: 10px;
+    color: black;
+    text-decoration: none;
+    border: 2px solid #d9d9d9;
+    border-radius: 25px;
+  }
+  
+  .filters a:hover{
+    background-color: #DEEBFF;
+  }
+  
+  .filters a:active{
+    background-color: #DEEBFF;
+  }
+  
+  .filters .icon {
+    fill: #0065fc;
+    height: 22px;
+    width: 22px;
+  }
+  
+  .icon-info {
+    height: 12px;
+    width: 12px;
+    border: 1px solid #d9d9d9;
+    border-radius: 25px;
+    padding: 5px;
+    gap: 0px;
+    border: 1px 0px 0px 0px;
+    opacity: 0px;
+    fill: #0065fc;
+  }
+  
+  .info-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 30px 0px;
+  }
+  
+  span.text {
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+  
+    line-height: 18.78px;
+    text-align: left;
   }
   
   /****** Accommodation And Popular ***********/
@@ -109,14 +217,14 @@
   }
   
   .accommodation-and-popular section {
+    display: flex;
     border-radius: 20px;
     padding: 10px;
-    margin-top: 0px;
+    margin-top: 80px;
     box-sizing: border-box;
-    flex-direction: column;
-    display: flex;
-    justify-content: space-around;
     background-color: var(--main-bg-color);
+    flex-direction: column;
+    justify-content: space-around;
   }
   
   /****** Accommodation ***********/
@@ -200,17 +308,21 @@
   
   /****** Popular ***********/
   .popular {
+
     width: 32%;
   }
   
-  .popular-title {
+.popular-title {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+}
   
+  .popular-cards{
+    display: grid;
+  }
+
   .popular-cards .card {
-    display: flex;
     display: flex;
     margin-top: 5px;
   }
@@ -464,7 +576,9 @@
     }
   
     .popular-cards .card {
-      margin-top: 10px;
+  display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
     }
   }
   
