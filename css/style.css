@@ -266,7 +266,7 @@
     background-color: #ffffff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 10px;
-    height: fit-content;
+    height: auto;
   }
   
   .accommodation-card-txt{
@@ -479,7 +479,6 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
-      height: auto;
     }
   
     .popular {
