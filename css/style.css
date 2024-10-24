@@ -72,6 +72,10 @@
     align-content: center;
     height: 49px;
   }
+
+  .search-bar .icon-search{
+    display: none;
+  }
   
   .pin-icon-cont {
     border: 1px solid #f2f2f2;
@@ -217,15 +221,15 @@
   }
   
   .accommodation-and-popular section {
-    border-radius: 20px;
     padding: 30px;
     box-sizing: border-box;
-    background-color: var(--main-bg-color);
   }
   
   /****** Accommodation ***********/
   .accommodation {
     width: 65%;
+    border-radius: 20px;
+    background-color: var(--main-bg-color);
   }
   
   .accommodation section {
@@ -244,6 +248,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+    padding-bottom: 20px;
     /*  grid-template-rows: 1fr 1fr; */
     /*   width: 65%; */
   
@@ -309,8 +314,9 @@
   
   /****** Popular ***********/
   .popular {
-
+    border-radius: 20px;
     width: 32%;
+    background-color: var(--main-bg-color);
   }
   
 .popular-title {
@@ -473,6 +479,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
+      height: auto;
     }
   
     .popular {
@@ -482,6 +489,8 @@
     }
   
     .popular-cards {
+        display: flex;
+        flex-direction: column;
     }
   
     .popular-cards .card-content {
@@ -489,8 +498,7 @@
     }
   
     .card {
-      min-width: 100%;
-      height: 100%;
+  
     }
     .card-txt h3 {
       font-size: 0.8em;
@@ -510,17 +518,13 @@
   }
   /* Mobile Device */
   @media (max-width: 480px) {
+    .main-container{
+        padding: 0px;
+    }
     footer {
       display: grid;
       grid-template-columns: 1fr;
-    }
-  
-    header {
-      display: flex;
-      flex-flow: row;
-      /* Since flex-flow is column, it's centered in a VERTICAL ↕️ axis in a column-based layout  */
-      justify-content: center;
-      align-content: center;
+      border-radius: 0;
     }
   
     .headercontainer {
@@ -528,14 +532,21 @@
       flex-direction: column;
       align-items: center;
     }
+
+    .headercontainer a{
+        padding: 10px 45px;
+        border-bottom: 1.5px solid #f2f2f2;
+    }
   
     .headercontainer a:hover {
-      border-top: none;
       border-bottom: 1.5px solid #0065fc;
+      border-top: none;
+      width: max-content;
     }
   
     .headercontainer nav {
       width: 100%;
+      padding: 10px 0px;
     }
   
     .headercontainer img {
@@ -543,24 +554,66 @@
   
     .headercontainer ul {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       width: 100%;
-      /*  gap-left: 0px;
-  margin-left: 0px;
-      padding-left: 0px; 
-  Trying to make the border when hovering over anchor touch the entire side 
-  */
-    }
+      padding: 10px 0px;
+      border-bottom: 2px solid #f2f2f2;
+    } 
   
     .headercontainer li {
     }
   
+.search-bar{
+    min-width: 400px;
+}
+
+.search-bar input{
+    flex-grow: 1;
+}
+
+.search .icon-search{
+    display: inline;
+}
+
+.search-text{
+    display: none;
+}
+
+.search{
+    width: auto;
+}
+
+    .filters{ 
+        display: grid;
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        gap: 10px; }
+
+    .filters li{
+        display: grid;
+    }
+
+    .filters li:first-child{ 
+        grid-column: span 2; 
+        font-weight: bold; 
+        margin-bottom: 10px; 
+        text-align: left;
+    }
+
     .accommodation-and-popular {
       display: flex;
       flex-direction: column-reverse;
       gap: 10px;
     }
   
+.accommodation{
+    background-color: transparent;
+    margin-bottom: 0px;
+    }
+
+.popular{
+    border-radius: 0px;
+}
+
     .accommodation-cards {
       display: grid;
       grid-template-columns: 1fr;
@@ -573,9 +626,6 @@
     }
   
     .popular-cards .card {
-  display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    }
+
   }
   
