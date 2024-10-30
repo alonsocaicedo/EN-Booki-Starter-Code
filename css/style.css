@@ -407,6 +407,10 @@
     padding: 10px 40px; /*  top/btm, l/r */
   }
   
+.thingstodo section{
+    display:flex
+}
+
   footer {
     background-color: var(--main-bg-color);
     border-radius: 20px;
