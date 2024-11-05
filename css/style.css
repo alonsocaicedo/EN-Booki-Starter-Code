@@ -411,22 +411,26 @@ h3.thingstodo-card-title {
 .thingstodo-container {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
+	gap: 30px;
 }
 
 .thingstodo-card {
 	border-radius: 20px;
-	background-color: lightgray;
-	box-shadow: ;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .thingstodo-card img {
-	border-radius: 20px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
 	width: 100%;
 	height: 380px;
 	object-fit: cover;
 }
 
 .thingstodo-card-txt {
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 footer {
