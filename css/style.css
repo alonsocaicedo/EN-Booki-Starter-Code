@@ -20,7 +20,7 @@ body {
 }
 
 .main-container {
-	width: 100%;
+	max-width: 1440px;
 	padding: 0 50px;
 	box-sizing: border-box;
 }
@@ -431,17 +431,22 @@ h3.thingstodo-card-title {
 .thingstodo-card-txt {
 	padding-left: 20px;
 	padding-right: 20px;
+	/* display: flex; */
+}
+
+.thingstodo-card-txt h3 {
+	font-size: 16px;
+	margin-bottom: 0px;
 }
 
 footer {
 	background-color: var(--main-bg-color);
-	border-radius: 20px;
 	padding: 20px;
 	padding-right: 0px;
 	box-sizing: border-box;
 	width: 100%;
 	margin-top: 20px;
-	letter-spacing: 0.5px;
+	/* letter-spacing: 0.5px; */
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 }
@@ -486,14 +491,29 @@ footer a:active {
 
 /* Tablet: NEED Most Pop UNDER ACCOMODATION, and things to do to adjust height/width*/
 
-@media (width <= 700px) {
+@media (width <= 1024px) {
+	.main-container {
+		width: 100%;
+		padding: 0px 50px;
+	}
+
+	.filters {
+		flex-wrap: nowrap;
+		gap: 10px;
+	}
+
 	.headercontainer img {
 		margin-top: 10px;
+	}
+
+	.headercontainer ul {
+		margin-top: 3px;
 	}
 
 	.accommodation-and-popular {
 		display: flex;
 		flex-direction: column;
+		padding: auto;
 	}
 	.accommodation {
 		width: 100%;
@@ -503,18 +523,19 @@ footer a:active {
 	.accommodation-card {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-around;
 	}
 
 	.popular {
 		width: 100%;
-		justify-content: space-between;
-		gap: 0px;
 	}
 
 	.popular-cards {
 		display: flex;
-		flex-direction: column;
+		gap: 10px;
+	}
+
+	.popular-cards .card {
+		width: -webkit-fill-available;
 	}
 
 	.popular-cards .card-content {
@@ -534,13 +555,30 @@ footer a:active {
 	}
 
 	.card img {
-		max-height: 100%;
+	}
+
+	section .thingstodo {
+		padding: 30px;
+	}
+
+	.thingstodo-card img {
+		height: 60%;
+	}
+
+	.thingstodo-card-txt {
+		padding: 0px 10px;
+	}
+	.thingstodo-card-txt h3 {
+		margin-top: 0px;
+		margin-right: 5px;
+		margin-left: 5px;
 	}
 }
 /* Mobile Device */
-@media (max-width: 480px) {
+@media (max-width: 700px) {
 	.main-container {
-		padding: 0px;
+		padding: 0px 20px;
+		width: 100%;
 	}
 	footer {
 		display: grid;
@@ -585,7 +623,7 @@ footer a:active {
 	}
 
 	.search-bar {
-		min-width: 400px;
+		min-width: auto;
 	}
 
 	.search-bar input {
@@ -606,7 +644,7 @@ footer a:active {
 
 	.filters {
 		display: grid;
-		grid-template-columns: repeat(2, minmax(200px, 1fr));
+		grid-template-columns: repeat(2, minmax(auto, 1fr));
 		gap: 10px;
 	}
 
@@ -627,6 +665,10 @@ footer a:active {
 		gap: 10px;
 	}
 
+	.accommodation-and-popular section {
+		padding: 30px 20px 30px 20px;
+	}
+
 	.accommodation {
 		background-color: transparent;
 		margin-bottom: 0px;
@@ -641,6 +683,10 @@ footer a:active {
 		grid-template-columns: 1fr;
 	}
 
+	.accommodation-card {
+		padding: 5px;
+	}
+
 	.popular-cards {
 		display: flex;
 		flex-wrap: wrap;
@@ -648,5 +694,27 @@ footer a:active {
 	}
 
 	.popular-cards .card {
+		align-items: center;
+	}
+
+	section .thingstodo {
+		display: grid;
+		justify-items: center;
+	}
+
+	.thingstodo-container {
+		display: block;
+		padding: 0px 30px 0px 30px;
+	}
+
+	h3.thingstodo-card-title {
+		padding-left: 20px;
+	}
+	.thingstodo-card img {
+		height: auto;
+	}
+
+	.thingstodo-card h3 {
+		padding-bottom: 20px;
 	}
 }
