@@ -9,14 +9,14 @@
 	--filter-bg-color: #deebff;
 }
 
-.fa-solid,
-.fa-regular {
+.fa-solid {
 	color: var(--main-color);
 }
 
-body {
-	display: flex;
-	justify-content: center;
+.fa-regular,
+.far {
+	font-weight: 700;
+	color: var(--main-bg-color);
 }
 
 .main-container {
@@ -223,6 +223,7 @@ span.text {
 .accommodation-and-popular section {
 	padding: 30px;
 	box-sizing: border-box;
+	margin-bottom: 50px;
 }
 
 /****** Accommodation ***********/
@@ -249,7 +250,7 @@ span.text {
 	grid-template-columns: repeat(3, 1fr);
 	/* grid-template-columns: 1fr 1fr 1fr; */
 	gap: 20px;
-	padding-bottom: 20px;
+	padding-bottom: 30px;
 }
 
 .accommodation-card {
@@ -260,15 +261,15 @@ span.text {
 	border-radius: 20px;
 	background-color: #ffffff;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-	padding: 10px;
+	padding: 5px;
 	height: auto;
 }
 
 .accommodation-card-txt {
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
 	padding: 5px;
+	padding-left: 15px;
 }
 
 .accommodation-card h3 {
@@ -280,7 +281,7 @@ span.text {
 	margin: 5px 0px;
 }
 
-.accommodation-card span {
+.accommodation-card .card-rating {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	padding-top: 0px;
@@ -358,15 +359,14 @@ header {
 }
 
 .headercontainer img {
-	height: 50px;
-
-	margin-top: 10px;
+	height: 19px;
 }
 
 .headercontainer {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
+	align-items: center;
 }
 
 .headercontainer ul {
@@ -392,6 +392,7 @@ header {
 }
 .headercontainer li {
 	display: inline;
+	margin-top: -15px;
 }
 
 .headercontainer a {
@@ -399,7 +400,7 @@ header {
 	color: black;
 	letter-spacing: 0.6px;
 	text-align: center;
-	padding: 10px 40px; /*  top/btm, l/r */
+	padding: 10px 30px; /*  top/btm, l/r */
 }
 
 section.thingstodo {
@@ -412,6 +413,8 @@ h3.thingstodo-card-title {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 30px;
+	margin-top: 40px;
+	margin-bottom: 50px;
 }
 
 .thingstodo-card {
@@ -436,7 +439,7 @@ h3.thingstodo-card-title {
 
 .thingstodo-card-txt h3 {
 	font-size: 16px;
-	margin-bottom: 0px;
+	margin: 20px 0px;
 }
 
 footer {
@@ -507,7 +510,6 @@ footer a:active {
 	}
 
 	.headercontainer ul {
-		margin-top: 3px;
 	}
 
 	.accommodation-and-popular {
@@ -576,6 +578,10 @@ footer a:active {
 }
 /* Mobile Device */
 @media (max-width: 700px) {
+	body {
+		margin: 0px;
+	}
+
 	.main-container {
 		padding: 0px 20px;
 		width: 100%;
@@ -584,6 +590,9 @@ footer a:active {
 		display: grid;
 		grid-template-columns: 1fr;
 		border-radius: 0;
+		margin-right: -20px;
+		margin-left: -20px;
+		width: auto;
 	}
 
 	.headercontainer {
@@ -593,7 +602,6 @@ footer a:active {
 	}
 
 	.headercontainer a {
-		padding: 10px 45px;
 		border-bottom: 1.5px solid #f2f2f2;
 	}
 
@@ -620,6 +628,7 @@ footer a:active {
 	}
 
 	.headercontainer li {
+		margin-top: 0px;
 	}
 
 	.search-bar {
@@ -667,6 +676,9 @@ footer a:active {
 
 	.accommodation-and-popular section {
 		padding: 30px 20px 30px 20px;
+		margin-right: -20px;
+		margin-left: -20px;
+		box-sizing: unset;
 	}
 
 	.accommodation {
@@ -681,6 +693,9 @@ footer a:active {
 	.accommodation-cards {
 		display: grid;
 		grid-template-columns: 1fr;
+		padding: 20px;
+		padding-bottom: 0px;
+		padding-top: 0px;
 	}
 
 	.accommodation-card {
@@ -688,13 +703,25 @@ footer a:active {
 	}
 
 	.popular-cards {
-		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+		padding: 20px;
+		padding-bottom: 0px;
+		padding-top: 0px;
+		gap: 0px;
 	}
 
 	.popular-cards .card {
 		align-items: center;
+	}
+
+	.popular-cards .card-txt {
+		margin-top: -40px;
+	}
+
+	.popular-cards .card-rating {
+		margin-bottom: -20px;
+		margin-top: 50px;
 	}
 
 	section .thingstodo {
@@ -703,8 +730,8 @@ footer a:active {
 	}
 
 	.thingstodo-container {
-		display: block;
-		padding: 0px 30px 0px 30px;
+		grid-template-columns: 1fr;
+		padding: 30px;
 	}
 
 	h3.thingstodo-card-title {
@@ -714,7 +741,13 @@ footer a:active {
 		height: auto;
 	}
 
-	.thingstodo-card h3 {
+	.thingstodo-card txt {
 		padding-bottom: 20px;
+		margin-top: 16px;
+		margin-left: 0px;
+	}
+
+	.thingstodo-card h3 {
+		padding: 20px;
 	}
 }
