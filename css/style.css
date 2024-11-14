@@ -373,7 +373,8 @@ header {
 	margin-top: 30px;
 }
 
-.headercontainer a:hover {
+.headercontainer a:hover,
+.headercontainer a.active {
 	color: #0065fc;
 	border-top: 1.5px solid #0065fc;
 }
@@ -602,13 +603,15 @@ footer a:active {
 	}
 
 	.headercontainer a {
-		border-bottom: 1.5px solid #f2f2f2;
+		border-bottom: 2px solid #f2f2f2;
+		display: block;
+		text-align: center;
 	}
 
-	.headercontainer a:hover {
-		border-bottom: 1.5px solid #0065fc;
+	.headercontainer a:hover,
+	.headercontainer a.active {
+		border-bottom: 2px solid #0065fc;
 		border-top: none;
-		width: max-content;
 	}
 
 	.headercontainer nav {
@@ -621,14 +624,13 @@ footer a:active {
 
 	.headercontainer ul {
 		display: flex;
-		justify-content: space-around;
 		width: 100%;
 		padding: 10px 0px;
-		border-bottom: 2px solid #f2f2f2;
 	}
 
 	.headercontainer li {
 		margin-top: 0px;
+		width: 50%;
 	}
 
 	.search-bar {
