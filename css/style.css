@@ -698,6 +698,12 @@ footer a:active {
 		margin-bottom: 0px;
 	}
 
+	.accommodation-title {
+		padding-left: 20px;
+	}
+	.accommodation a {
+		padding-left: 20px;
+	}
 	.popular {
 		border-radius: 0px;
 	}
@@ -706,12 +712,15 @@ footer a:active {
 		display: grid;
 		grid-template-columns: 1fr;
 		padding: 20px;
-		padding-bottom: 0px;
 		padding-top: 0px;
 	}
 
 	.accommodation-card {
 		padding: 5px;
+	}
+
+	.popular-title .section-title {
+		padding-left: 20px;
 	}
 
 	.popular-cards {
@@ -744,13 +753,15 @@ footer a:active {
 	.thingstodo-container {
 		grid-template-columns: 1fr;
 		padding: 30px;
+		padding-top: 0px;
 	}
 
 	h3.thingstodo-card-title {
-		padding-left: 20px;
+		padding-left: 30px;
+		margin-bottom: 0px;
 	}
 	.thingstodo-card img {
-		height: auto;
+		height: 141px;
 	}
 
 	.thingstodo-card txt {
@@ -760,6 +771,6 @@ footer a:active {
 	}
 
 	.thingstodo-card h3 {
-		padding: 20px;
+		padding: 5px;
 	}
 }
